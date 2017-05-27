@@ -1,0 +1,89 @@
+﻿@section scripts{
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/app/app.js"></script>
+    <script src="~/app/AngularDemoViewCtrl.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+
+}
+
+
+<html ng-app="app">
+<head>
+    <title></title>
+</head>
+<body ng-controller="AngularDemoViewCtrl as vm">
+
+
+    <div class="panel">
+        <div class="panel-heading">
+            <label class="panel-title">
+                Customer Form
+            </label>
+        </div>
+        <div class="panel-body">
+
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <input type="text" name="First Name" ng-model="vm.Customer.FirstName" value="" placeholder="Enter First Name" />
+
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <input type="text" name="Last Name" ng-model="vm.Customer.LastName" value="" placeholder="Enter Last Name" />
+
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <input type="text" name="Age" ng-model="vm.Customer.Age" value="" placeholder="Enter Age" />
+
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <input type="text" name="Email" ng-model="vm.Customer.Email" value="" placeholder="Enter Email" />
+
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <button type="button" ng-click="vm.SubmitForm(vm.Customer)">submit</button>
+
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div ng-show="vm.ShowUserInput">
+                    <div>
+                        <div class="col-xs-6">
+                            <label>First Name : {{vm.Customer.FirstName}}</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <label>Last Name : {{vm.Customer.LastName}}</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label>Age : {{vm.Customer.Age}}</label>
+                    </div>
+                    <div class="col-md-12">
+                        <label>Email : {{vm.Customer.Email}}</label>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+           
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
